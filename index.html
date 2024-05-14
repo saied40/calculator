@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="main.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="top">
+      <p class="error" id="err"></p>
+      <div class="typing" id="typingDiv" name="typingDiv">0</div>
+      <div class="result" id="resultDiv" name="resultDiv"></div>
+    </div>
+    <section class="btns">
+      <button type="button" class="del all sm-1" title="all clear" onclick="allClear()">Ac</button>
+      <button type="button" class="del one kDelete sm-2" title="delete" onclick="del()">&#9003;</button>
+      <button type="button" class="num sm-5" onclick="handleBtn(this)">(</button>
+      <button type="button" class="num sm-6" onclick="handleBtn(this)">)</button>
+      <button type="button" class="operator kDev  sm-4" onclick="handleOperator(this)">/</button>
+      <button type="button" class="num k7  sm-9" onclick="handleBtn(this)">7</button>
+      <button type="button" class="num k8 sm-10" onclick="handleBtn(this)">8</button>
+      <button type="button" class="num k9 sm-11" onclick="handleBtn(this)">9</button>
+      <button type="button" class="num plusMinus sm-7" onclick="handlePlusMinus()">&#177;</button>
+      <button type="button" class="operator kMul sm-8" onclick="handleOperator(this)">*</button>
+      <button type="button" class="num k4 sm-13" onclick="handleBtn(this)">4</button>
+      <button type="button" class="num k5 sm-14" onclick="handleBtn(this)">5</button>
+      <button type="button" class="num k6 sm-15" onclick="handleBtn(this)">6</button>
+      <button type="button" class="operator k% sm-3" onclick="handleOperator(this)">%</button>
+      <button type="button" class="operator k- sm-12" onclick="handleOperator(this)">-</button>
+      <button type="button" class="num k1 sm-17" onclick="handleBtn(this)">1</button>
+      <button type="button" class="num k2 sm-18" onclick="handleBtn(this)">2</button>
+      <button type="button" class="num k3 sm-19" onclick="handleBtn(this)">3</button>
+      <button type="button" class="operator kPlus sm-16" onclick="handleOperator(this)">+</button>
+      <button type="button" class="equal kEqual sm-20" onclick="calculate()">=</button>
+      <button type="button" class="num sm-21" onclick="handleBtn(this)">00</button>
+      <button type="button" class="num k0 sm-22" onclick="handleBtn(this)">0</button>
+      <button type="button" class="dot kDot sm-23" onclick="handleDot()">.</button>
+    </section>
+    <label for="dark">
+      <input type="checkbox" id="dark">
+      <span onclick="chTheme(this)"></span>
+    </label>
+  </div>
+</body>
+
+</html>
+
+<!-- 
+
+  12 * 5 / 3
+  20
+
+  AC - DEL - % - /
+  7 - 8 - 9 - *
+  4 - 5 - 6 - -
+  1 - 2 - 3 - +
+  00 - 0 - 0 - =
+
+
+
+    <section class="btns">
+      <button type="button" class="del all sm-1" title="all clear">Ac</button>
+      <button type="button" class="del one kDelete sm-2" title="delete">&#9003;</button>
+      <button type="button" class="operator k% sm-3">%</button>
+      <button type="button" class="operator sm-4">&#177;</button>
+      <button type="button" class="operator sm-5">(</button>
+      <button type="button" class="operator sm-6">)</button>
+      <button type="button" class="operator kDev sm-7">/</button>
+      <button type="button" class="operator kMul sm-8">*</button>
+      <button type="button" class="num k7 sm-9">7</button>
+      <button type="button" class="num k8 sm-10">8</button>
+      <button type="button" class="num k9 sm-11">9</button>
+      <button type="button" class="operator k- sm-12">-</button>
+      <button type="button" class="num k4 sm-13">4</button>
+      <button type="button" class="num k5 sm-14">5</button>
+      <button type="button" class="num k6 sm-15">6</button>
+      <button type="button" class="operator kPlus sm-16">+</button>
+      <button type="button" class="num k1 sm-17">1</button>
+      <button type="button" class="num k2 sm-18">2</button>
+      <button type="button" class="num k3 sm-19">3</button>
+      <button type="button" class="equal kEqual sm-20">=</button>
+      <button type="button" class="num sm-21">00</button>
+      <button type="button" class="num k0 sm-22">0</button>
+      <button type="button" class="dot kDot sm-23">.</button>
+    </section>
+
+  -->
+
