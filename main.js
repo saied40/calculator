@@ -61,19 +61,15 @@ function del() {
 addEventListener("keydown", (e) => {
   if (e.key === ".") {
     document.querySelector(`.kDot`).click();
-    // handleDot();
   } else if (e.key === "Delete") {
     document.querySelector(`.del.all`).click();
-    // del();15
   } else if (e.keyCode == 8) {
     document.querySelector(`.kDelete`).click();
-    // del();15
-  } else if (e.key === "=" || e.key === "Enter") {
+  } else if ((e.key === "=" && e.shiftKey == false) || e.key === "Enter") {
     document.querySelector(`.kEqual`).click();
-    // calculate();
   } else if (e.key === "+") {
     document.querySelector(`.kPlus`).click();
-  } else if (e.key === "*") {
+  } else if (e.key === "*" || (e.keyCode == 56 && e.shiftKey == true)) {
     document.querySelector(`.kMul`).click();
   } else if (e.key === "/") {
     document.querySelector(`.kDev`).click();
